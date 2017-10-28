@@ -1,5 +1,4 @@
 from tkinter import *
-from AnimatedGif import *
 from tkinter.font import Font
 from random import randint
 from tkinter import messagebox
@@ -61,23 +60,23 @@ def diceplayer():
 		balancelabel = Label(root, text = "Balance: " + str(balance))
 		balancelabel.configure(font=my2ndFont)
 		balancelabel.place(x = "150", y = "350")
-		image3 = tk.PhotoImage(file="0.png")
-		image4 = tk.PhotoImage(file="1.png")
-		image5 = tk.PhotoImage(file="2.png")
-		image6 = tk.PhotoImage(file="3.png")
-		image7 = tk.PhotoImage(file="4.png")
-		image8 = tk.PhotoImage(file="5.png")
-		label81 = tk.Label(image=image3)
+		image3 = PhotoImage(file="0.png")
+		image4 = PhotoImage(file="1.png")
+		image5 = PhotoImage(file="2.png")
+		image6 = PhotoImage(file="3.png")
+		image7 = PhotoImage(file="4.png")
+		image8 = PhotoImage(file="5.png")
+		label81 = Label(image=image3)
 		label81.image = image3
-		label9 = tk.Label(image=image4)
+		label9 = Label(image=image4)
 		label9.image = image4
-		label10 = tk.Label(image=image5)
+		label10 = Label(image=image5)
 		label10.image = image5
-		label11 = tk.Label(image=image6)
+		label11 = Label(image=image6)
 		label11.image = image6
-		label12 = tk.Label(image=image7)
+		label12 = Label(image=image7)
 		label12.image = image7
-		label13 = tk.Label(image=image8)
+		label13 = Label(image=image8)
 		label13.image = image8
 	else:
 		messagebox.showinfo("Wrong!", "Incorrect!  You Lose " + str(wager) + " Dollars!\nYou Guessed " + str(guessednumber) + "!\nThe Real Number Was " + number)
@@ -114,23 +113,23 @@ def diceplayer():
 		balancelabel.configure(font=my2ndFont)
 		#balancelabel.place_forget()
 		balancelabel.place(x = "150", y = "350")
-		image3 = tk.PhotoImage(file="0.png")
-		image4 = tk.PhotoImage(file="1.png")
-		image5 = tk.PhotoImage(file="2.png")
-		image6 = tk.PhotoImage(file="3.png")
-		image7 = tk.PhotoImage(file="4.png")
-		image8 = tk.PhotoImage(file="5.png")
-		label81 = tk.Label(image=image3)
+		image3 = PhotoImage(file="0.png")
+		image4 = PhotoImage(file="1.png")
+		image5 = PhotoImage(file="2.png")
+		image6 = PhotoImage(file="3.png")
+		image7 = PhotoImage(file="4.png")
+		image8 = PhotoImage(file="5.png")
+		label81 = Label(image=image3)
 		label81.image = image3
-		label9 = tk.Label(image=image4)
+		label9 = Label(image=image4)
 		label9.image = image4
-		label10 = tk.Label(image=image5)
+		label10 = Label(image=image5)
 		label10.image = image5
-		label11 = tk.Label(image=image6)
+		label11 = Label(image=image6)
 		label11.image = image6
-		label12 = tk.Label(image=image7)
+		label12 = Label(image=image7)
 		label12.image = image7
-		label13 = tk.Label(image=image8)
+		label13 = Label(image=image8)
 
 def endanimation():
 	label13.place_forget()
@@ -172,8 +171,8 @@ def place2():
 def rangesystem():
 	rangechoice = open("RangeChoice.txt", "r").read()
 	if int(rangechoice) == 1:
-		#number = randint(1,10)
-		number = 3
+		number = randint(1,10)
+		#number = 3
 		saveFile = open("Number.txt", "w")
 		saveFile.write(str(number))
 		saveFile.close()
@@ -266,13 +265,13 @@ def getinfo():
 
 
 balance = open("Balance.txt", "r").read()
-image = tk.PhotoImage(file="Dice.png")
-image2 = tk.PhotoImage(file="Dice.png")
+image = PhotoImage(file="Dice.png")
+image2 = PhotoImage(file="Dice.png")
 myFont = Font(family="Comic Sans MS", size=25)
 my2ndFont = Font(family = "Comic Sans MS", size = 20)
 
-label = tk.Label(image=image)
-label2 = tk.Label(image=image2)
+label = Label(image=image)
+label2 = Label(image=image2)
 title = Label(root, text = "GUI Dice Gambler")
 title.configure(font=myFont)
 lineslabel = Label(root, text = lines)
@@ -291,23 +290,23 @@ guessednumberentry = Entry(root)
 submit = Button(root, text = "Submit", command = getinfo)
 balancelabel = Label(root, text = "Balance: " + str(balance))
 balancelabel.configure(font=my2ndFont)
-image3 = tk.PhotoImage(file="0.png")
-image4 = tk.PhotoImage(file="1.png")
-image5 = tk.PhotoImage(file="2.png")
-image6 = tk.PhotoImage(file="3.png")
-image7 = tk.PhotoImage(file="4.png")
-image8 = tk.PhotoImage(file="5.png")
-label81 = tk.Label(image=image3)
+image3 = PhotoImage(file="0.png")
+image4 = PhotoImage(file="1.png")
+image5 = PhotoImage(file="2.png")
+image6 = PhotoImage(file="3.png")
+image7 = PhotoImage(file="4.png")
+image8 = PhotoImage(file="5.png")
+label81 = Label(image=image3)
 label81.image = image3
-label9 = tk.Label(image=image4)
+label9 = Label(image=image4)
 label9.image = image4
-label10 = tk.Label(image=image5)
+label10 = Label(image=image5)
 label10.image = image5
-label11 = tk.Label(image=image6)
+label11 = Label(image=image6)
 label11.image = image6
-label12 = tk.Label(image=image7)
+label12 = Label(image=image7)
 label12.image = image7
-label13 = tk.Label(image=image8)
+label13 = Label(image=image8)
 label13.image = image8
 
 rangechoice = rbVar.get()
